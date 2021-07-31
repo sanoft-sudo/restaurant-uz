@@ -1,10 +1,10 @@
-import TopNavbar from "./components/TopNavbar";
+import MainHeader from "./components/MainHeader";
 import "./styles.css";
 
 export default function App() {
   return (
     <div>
-      <TopNavbar />
+      <MainHeader />
     </div>
   );
 }
