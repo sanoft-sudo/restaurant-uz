@@ -6,8 +6,9 @@ import Slider from "react-slick";
 
 const StyledCarousel = styled.div`
   position: relative;
+  width: 100%;
   .slider-image {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     object-fit: cover;
   }
@@ -21,7 +22,77 @@ const StyledCarousel = styled.div`
     background: rgba(0, 0, 0, 0.6);
     opacity: 1;
   } */
+
+  .slick-prev {
+    left: 28px;
+  }
+  .slick-next {
+    right: 28px;
+  }
+
+  .slick-prev,
+  .slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    z-index: 2;
+    top: 30%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -30%);
+    -ms-transform: translate(0, -30%);
+    transform: translate(0, -30%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+  .slick-prev:before {
+    content: "\2039";
+  }
+  .slick-next:before {
+    content: "\203A";
+  }
+  .slick-prev:before,
+  .slick-next:before {
+    font-family: "slick";
+    font-size: 20px;
+    line-height: 1;
+    opacity: 0.75;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 `;
+
+function NextSlide(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block" }}
+      onClick={onClick}
+    >
+      <i className="fas fa-angle-right"></i>
+    </div>
+  );
+}
+
+function PrevSlide(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block" }}
+      onClick={onClick}
+    >
+      <i className="fas fa-angle-left"></i>
+    </div>
+  );
+}
 
 const HeadCarousel = () => {
   var settings = {
@@ -32,7 +103,9 @@ const HeadCarousel = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000
+    autoplaySpeed: 2000,
+    nextArrow: <NextSlide />,
+    prevArrow: <PrevSlide />
   };
 
   const sliderImg = [

@@ -19,11 +19,12 @@ const StyledMainHeader = styled.div`
   }
   .above-head {
     display: block;
+    width: 100%;
   }
 
   .menu-row {
-    position: absolute;
     width: 100%;
+    display: block;
   }
 
   @media (max-width: 768px) {

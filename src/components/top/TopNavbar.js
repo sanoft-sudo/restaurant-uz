@@ -9,6 +9,7 @@ const StyledTopNav = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 0 25px;
+  box-sizing: border-box;
 
   .top-navDivs {
     display: flex;
