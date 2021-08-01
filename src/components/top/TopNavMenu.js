@@ -74,6 +74,7 @@ const ResponsiveNav3DIV = styled.div`
 
   nav .naVBar .naVBar-link:hover,
   nav .naVBar .naVBar-link:focus {
+    color: #00a78e;
     text-shadow: 6px 6px 6px rgba(0, 0, 0, 0.6);
     transition: text-shadow 0.5s ease-in-out;
   }

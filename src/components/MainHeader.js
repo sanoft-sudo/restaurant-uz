@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import HeadCarousel from "./top/HeadCarousel";
 import TopNavbar from "./top/TopNavbar";
+import TopNavBody from "./top/TopNavBody";
 import TopNavMenu from "./top/TopNavMenu";
 
 const StyledMainHeader = styled.div`
@@ -37,6 +38,9 @@ const MainHeader = () => {
         </div>
         <div className="menu-row">
           <TopNavMenu />
+        </div>
+        <div>
+          <TopNavBody />
         </div>
         <HeadCarousel />
       </div>
