@@ -8,13 +8,39 @@ const StyledTopNav = styled.div`
   z-index: 2;
   display: flex;
   justify-content: space-between;
-  padding: 0 25px;
+  padding: 0 32px;
   box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+
+    .top-navDivs {
+      margin-bottom: 5px;
+      text-align: center;
+      justify-content: center;
+      display: inline-block;
+    }
+  }
+
+  @media (max-width: 515px) {
+    .nested-span {
+      display: flex;
+      flex-direction: column;
+    }
+    .nested-span span {
+      margin-bottom: 3px;
+    }
+  }
 
   .top-navDivs {
     display: flex;
     align-items: center;
     font-size: 13px;
+
     color: #d4d1cb;
   }
   a,
@@ -44,7 +70,9 @@ const TopNavbar = () => {
       </div>
       <div className="top-navDivs">
         <i class="far fa-clock"></i>
-        <span>Open hours: Monday - Sunday 7:00 - 24:00</span>
+        <span className="nested-span">
+          <span>Open hours:</span> <span>Monday - Sunday 7:00 - 24:00</span>
+        </span>
       </div>
     </StyledTopNav>
   );

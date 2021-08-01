@@ -7,6 +7,16 @@ const ResponsiveNav3DIV = styled.div`
   margin: 25px 0;
   position: absolute;
   z-index: 2;
+  padding: 0 20px;
+
+  @media (max-width: 768px) {
+    margin: 8px 0;
+    padding: 0 10px;
+  }
+
+  @media (max-width: 515px) {
+    margin: 15px 0;
+  }
 
   nav {
     width: 100%;
@@ -206,13 +216,13 @@ const ResponsiveNav3DIV = styled.div`
   }
   .vertical-nav3 .VnaVBar .VnaVBar-item {
     position: relative;
-    background: rgba(255, 255, 255, 0.45);
+    background: rgba(0, 0, 0, 0.2);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    /* border: 1px solid rgba(255, 255, 255, 0.18); */
     margin-bottom: 5px;
   }
 
@@ -245,6 +255,7 @@ const ResponsiveNav3DIV = styled.div`
 
   .vertical-nav3 .VnaVBar .VnaVBar-link:hover,
   .vertical-nav3 .VnaVBar .VnaVBar-link:focus {
+    color: #00a78e;
     text-shadow: 6px 6px 6px rgba(0, 0, 0, 0.6);
     transition: text-shadow 0.5s ease-in-out;
   }
@@ -332,12 +343,10 @@ const ResponsiveNav3DIV = styled.div`
     display: block;
     position: relative;
     /* background: rgba(255, 255, 255, 0.45); */
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     /* backdrop-filter: blur(4px); */
     /* -webkit-backdrop-filter: blur(4px); */
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
     margin-bottom: 5px;
   }
   .vertical-nav3 .VnaVBar .VsubNavbar .VsubNavbar-item .VsubNavbar-link {
@@ -410,8 +419,8 @@ const ResponsiveNav3DIV = styled.div`
   .burger span:after {
     display: block;
     width: 1.5rem;
-    height: 0.125rem;
-    background-color: black;
+    height: 0.15rem;
+    background-color: #fff;
     transition: 0.3s;
     opacity: 1;
   }
@@ -450,24 +459,24 @@ const ResponsiveNav3DIV = styled.div`
   }
   @-webkit-keyframes menuCloseMiddle--base {
     0% {
-      background-color: black;
+      background-color: #fff;
     }
     80% {
-      background-color: black;
+      background-color: #fff;
     }
     100% {
-      background-color: rgba(0, 0, 0, 0);
+      background-color: rgba(255, 255, 255, 0);
     }
   }
   @keyframes menuCloseMiddle--base {
     0% {
-      background-color: black;
+      background-color: #fff;
     }
     80% {
-      background-color: black;
+      background-color: #fff;
     }
     100% {
-      background-color: rgba(0, 0, 0, 0);
+      background-color: rgba(255, 255, 255, 0);
     }
   }
   @-webkit-keyframes menuCloseMiddle--after {
@@ -590,56 +599,17 @@ const TopNavMenu = () => {
           </li>
           <li className="VnaVBar-item dropdown">
             <a className="VnaVBar-link" href="#blog">
-              Blog
+              About
             </a>
-            <ul className="VsubNavbar">
-              <li className="VsubNavbar-item">
-                <a className="VsubNavbar-link" href="#design">
-                  Design
-                </a>
-              </li>
-              <li className="VsubNavbar-item">
-                <a className="VsubNavbar-link" href="#html">
-                  HTML
-                </a>
-              </li>
-              <li className="VsubNavbar-item">
-                <a className="VsubNavbar-link" href="#css">
-                  CSS
-                </a>
-              </li>
-              <li className="VsubNavbar-item">
-                <a className="VsubNavbar-link" href="#javascript">
-                  JavaScript
-                </a>
-              </li>
-            </ul>
           </li>
           <li className="VnaVBar-item dropdown">
             <a className="VnaVBar-link" href="#work">
-              Work
+              Menu
             </a>
-            <ul className="VsubNavbar">
-              <li className="VsubNavbar-item">
-                <a className="VsubNavbar-link" href="#web-design">
-                  Web Design
-                </a>
-              </li>
-              <li className="VsubNavbar-item">
-                <a className="VsubNavbar-link" href="#typogaphy">
-                  Typography
-                </a>
-              </li>
-              <li className="VsubNavbar-item">
-                <a className="VsubNavbar-link" href="#frontend">
-                  Front-End
-                </a>
-              </li>
-            </ul>
           </li>
           <li className="VnaVBar-item">
             <a className="VnaVBar-link" href="#about">
-              About
+              Contact
             </a>
           </li>
         </ul>

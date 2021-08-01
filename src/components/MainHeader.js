@@ -26,12 +26,6 @@ const StyledMainHeader = styled.div`
     width: 100%;
     display: block;
   }
-
-  @media (max-width: 768px) {
-    .above-head {
-      display: none;
-    }
-  }
 `;
 
 const MainHeader = () => {
