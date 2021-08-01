@@ -8,8 +8,8 @@ const StyledCarousel = styled.div`
   position: relative;
   width: 100%;
   .slider-image {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 400px;
     object-fit: cover;
   }
   /* .image-overlay:after {
