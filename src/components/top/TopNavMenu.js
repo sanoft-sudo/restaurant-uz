@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Logo from "../logo/Logo";
+import { Link } from "react-scroll";
 
 const ResponsiveNav3DIV = styled.div`
   width: 100%;
@@ -555,9 +556,9 @@ const TopNavMenu = () => {
     <ResponsiveNav3DIV showMenu={showMenu}>
       <nav>
         <div className="logo-humburger">
-          <a href="#home">
+          <Link href="#home">
             <Logo />
-          </a>
+          </Link>
           <label className="burger burger4" htmlFor="burger4">
             <input
               className="hidden"
@@ -570,48 +571,112 @@ const TopNavMenu = () => {
         </div>
         <ul className="naVBar">
           <li className="naVBar-item">
-            <a className="naVBar-link" href="#home">
+            <Link
+              activeClass="active"
+              to="section1"
+              spy={true}
+              smooth={true}
+              duration={1000}
+              className="naVBar-link"
+              href="#home"
+            >
               Home
-            </a>
+            </Link>
           </li>
           <li className="naVBar-item dropdown">
-            <a className="naVBar-link" href="#blog">
+            <Link
+              activeClass="active"
+              to="section2"
+              spy={true}
+              smooth={true}
+              duration={1000}
+              className="naVBar-link"
+              href="#blog"
+            >
               About
-            </a>
+            </Link>
           </li>
           <li className="naVBar-item dropdown">
-            <a className="naVBar-link" href="#work">
+            <Link
+              activeClass="active"
+              to="section3"
+              spy={true}
+              smooth={true}
+              duration={1000}
+              className="naVBar-link"
+              href="#work"
+            >
               Menu
-            </a>
+            </Link>
           </li>
           <li className="naVBar-item">
-            <a className="naVBar-link" href="#about">
+            <Link
+              activeClass="active"
+              to="section4"
+              spy={true}
+              smooth={true}
+              duration={1000}
+              className="naVBar-link"
+              href="#about"
+            >
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
       <div className="vertical-nav3">
         <ul className="VnaVBar">
           <li className="VnaVBar-item">
-            <a className="VnaVBar-link" href="#home">
+            <Link
+              activeClass="active"
+              to="section1"
+              spy={true}
+              smooth={true}
+              duration={1000}
+              className="VnaVBar-link"
+              href="#home"
+            >
               Home
-            </a>
+            </Link>
           </li>
           <li className="VnaVBar-item dropdown">
-            <a className="VnaVBar-link" href="#blog">
+            <Link
+              activeClass="active"
+              to="section2"
+              spy={true}
+              smooth={true}
+              duration={1000}
+              className="VnaVBar-link"
+              href="#blog"
+            >
               About
-            </a>
+            </Link>
           </li>
           <li className="VnaVBar-item dropdown">
-            <a className="VnaVBar-link" href="#work">
+            <Link
+              activeClass="active"
+              to="section3"
+              spy={true}
+              smooth={true}
+              duration={1000}
+              className="VnaVBar-link"
+              href="#work"
+            >
               Menu
-            </a>
+            </Link>
           </li>
           <li className="VnaVBar-item">
-            <a className="VnaVBar-link" href="#about">
+            <Link
+              activeClass="active"
+              to="section4"
+              spy={true}
+              smooth={true}
+              duration={1000}
+              className="VnaVBar-link"
+              href="#about"
+            >
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

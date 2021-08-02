@@ -6,12 +6,45 @@ const StyledNavBody = styled.div`
   justify-content: space-evenly;
   position: absolute;
   z-index: 3;
-  top: 15%;
+  top: 50%;
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.2);
   padding: 20px 0;
   box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    /* margin-top: 252px; */
+    background: #fff;
+    box-sizing: border-box;
+    z-index: 0;
+    position: relative;
+
+    .col-body .col-bodyTitle,
+    .col-body .col-bodyRecipe {
+      color: black;
+    }
+  }
+
+  @media (max-width: 630px) {
+    position: relative;
+    z-index: 0;
+    .subHead-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      box-sizing: border-box;
+      padding: 0;
+    }
+    .col-body .col-bodyTitle,
+    .col-body .col-bodyRecipe {
+      margin: 3px auto;
+    }
+    .col-body {
+      margin-bottom: 10px;
+    }
+  }
 
   .meal-img {
     width: 80px;
@@ -35,7 +68,10 @@ const StyledNavBody = styled.div`
   .col-body {
     display: flex;
     flex-direction: column;
+    text-align: center;
+    justify-content: center;
   }
+
   .col-bodyTitle {
     color: #fff;
     text-align: center;
@@ -45,6 +81,7 @@ const StyledNavBody = styled.div`
     max-width: 300px;
     margin-bottom: 8px;
     flex-wrap: wrap;
+    display: inline-block;
   }
 
   .col-bodyRecipe {
@@ -56,6 +93,7 @@ const StyledNavBody = styled.div`
     max-width: 300px;
     box-sizing: border-box;
     flex-wrap: wrap;
+    display: inline-block;
   }
 `;
 
@@ -93,7 +131,7 @@ const TopNavBody = () => {
 
   return (
     <StyledNavBody>
-      <div className="row subHead-body animate__animated animate__fadeInUp">
+      <div className="row subHead-body " data-aos="fade-up" data-aos-once>
         {data.map((meal, index) => (
           <div className="col-md-3 subbox-content" key={index}>
             <div className="col-header">

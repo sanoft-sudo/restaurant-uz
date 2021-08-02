@@ -7,11 +7,8 @@ import Slider from "react-slick";
 const StyledCarousel = styled.div`
   position: relative;
   width: 100%;
-  .slider-image {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-  }
+  z-index: 0;
+
   /* .image-overlay:after {
     content: "";
     position: absolute;
@@ -22,7 +19,12 @@ const StyledCarousel = styled.div`
     background: rgba(0, 0, 0, 0.6);
     opacity: 1;
   } */
-
+  img.slider-image {
+    width: 100%;
+    height: 500px !important;
+    object-fit: cover;
+    object-position: center 80%;
+  }
   .slick-prev {
     left: 28px;
   }
@@ -105,7 +107,8 @@ const HeadCarousel = () => {
     autoplay: true,
     autoplaySpeed: 2000,
     nextArrow: <NextSlide />,
-    prevArrow: <PrevSlide />
+    prevArrow: <PrevSlide />,
+    adaptiveHeight: true
   };
 
   const sliderImg = [
@@ -117,11 +120,21 @@ const HeadCarousel = () => {
   ];
 
   return (
-    <StyledCarousel>
+    <StyledCarousel id="section1">
       <Slider {...settings}>
         {sliderImg.map((slide, index) => (
           <div className="image-overlay">
-            <img className="slider-image" src={slide.src} alt={slide.alt} />
+            <img
+              className="slider-image"
+              style={{
+                width: "100%",
+                height: "500px",
+                objectFit: "cover",
+                objectPosition: "center 80%"
+              }}
+              src={slide.src}
+              alt={slide.alt}
+            />
           </div>
         ))}
       </Slider>

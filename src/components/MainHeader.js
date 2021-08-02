@@ -7,6 +7,8 @@ import TopNavMenu from "./top/TopNavMenu";
 
 const StyledMainHeader = styled.div`
   position: relative;
+  width: 100%;
+  height: 100%;
 
   .image-overlay:after {
     content: "";
@@ -39,10 +41,10 @@ const MainHeader = () => {
         <div className="menu-row">
           <TopNavMenu />
         </div>
-        <div>
-          <TopNavBody />
-        </div>
         <HeadCarousel />
+      </div>
+      <div>
+        <TopNavBody />
       </div>
     </StyledMainHeader>
   );
