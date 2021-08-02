@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import About from "./about/About";
+import MenuMeal from "./menu/MenuMeal";
 
 const StyledMainBodyDiv = styled.div`
   position: relative;
@@ -13,6 +14,7 @@ const MainBody = () => {
   return (
     <StyledMainBodyDiv>
       <About />
+      <MenuMeal />
     </StyledMainBodyDiv>
   );
 };
